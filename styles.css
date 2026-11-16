@@ -1,0 +1,272 @@
+
+/* Estilos generales del proyecto */
+:root {
+    --azul: #315be8;
+    --azul-oscuro: #182849;
+    --fondo: #f5f7fb;
+    --texto: #17233b;
+    --gris: #68758c;
+    --blanco: #ffffff;
+    --borde: #e1e7f0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 40px 7%;
+    color: white;
+    background: linear-gradient(120deg, var(--azul-oscuro), var(--azul));
+}
+
+.logo {
+    display: grid;
+    place-items: center;
+    min-width: 65px;
+    height: 65px;
+    border: 1px solid #ffffff80;
+    border-radius: 17px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.encabezado h1 {
+    margin: 5px 0;
+    line-height: 1.2;
+}
+
+.encabezado p {
+    margin-bottom: 0;
+}
+
+.etiqueta {
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.contenedor {
+    width: min(1000px, 90%);
+    margin: 35px auto;
+}
+
+.panel {
+    padding: 25px;
+    border: 1px solid var(--borde);
+    border-radius: 18px;
+    background: var(--blanco);
+    box-shadow: 0 8px 25px #17233b0a;
+}
+
+.introduccion {
+    margin-bottom: 22px;
+}
+
+.introduccion h2 {
+    margin-bottom: 5px;
+}
+
+.introduccion p,
+.tarjeta p {
+    color: var(--gris);
+}
+
+.etiqueta-azul {
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #eef3ff;
+    color: var(--azul);
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.ejercicios {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.tarjeta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    color: var(--texto);
+    text-decoration: none;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 15px;
+    transition: 0.2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-3px);
+    border-color: var(--azul);
+    box-shadow: 0 8px 20px #17233b12;
+}
+
+.numero,
+.icono {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 13px;
+    background: #eef3ff;
+    color: var(--azul);
+    font-weight: bold;
+}
+
+.tarjeta h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.tarjeta p {
+    margin: 4px 0 0;
+    font-size: 13px;
+}
+
+.pagina {
+    width: min(580px, 92%);
+    margin: 25px auto 40px;
+}
+
+.navegacion {
+    width: min(580px, 92%);
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.navegacion a {
+    color: var(--azul);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.formulario {
+    padding: 32px;
+}
+
+.formulario h1 {
+    margin: 15px 0 5px;
+    font-size: 28px;
+}
+
+.descripcion {
+    margin-bottom: 25px;
+    color: var(--gris);
+    font-size: 14px;
+}
+
+form {
+    display: grid;
+    gap: 9px;
+}
+
+label {
+    margin-top: 7px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d7dfeb;
+    border-radius: 9px;
+    background: #fbfcff;
+    color: var(--texto);
+    font: inherit;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--azul);
+    box-shadow: 0 0 0 3px #315be81a;
+}
+
+button {
+    margin-top: 15px;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    background: var(--azul);
+    color: white;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2145c4;
+}
+
+.resultado {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #b8e4d0;
+    border-radius: 10px;
+    background: #effbf5;
+    color: #155c42;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.resultado.error {
+    border-color: #f2c2be;
+    background: #fff4f2;
+    color: #b42318;
+}
+
+footer {
+    padding: 20px;
+    color: var(--gris);
+    text-align: center;
+    font-size: 12px;
+}
+
+@media (max-width: 650px) {
+    .encabezado {
+        padding: 28px 5%;
+        align-items: flex-start;
+    }
+
+    .logo {
+        min-width: 48px;
+        height: 48px;
+    }
+
+    .encabezado h1 {
+        font-size: 23px;
+    }
+
+    .ejercicios {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario {
+        padding: 23px;
+    }
+
+    .formulario h1 {
+        font-size: 24px;
+    }
+}

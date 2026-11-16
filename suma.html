@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma de tres valores</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/app.js" defer></script>
+</head>
+<body>
+    <nav class="navegacion">
+        <a href="../index.html">← Volver al inicio</a>
+        <span class="etiqueta-azul">EJERCICIO 01</span>
+    </nav>
+
+    <main class="pagina">
+        <section class="panel formulario">
+            <div class="icono">01</div>
+            <h1>Suma de tres valores</h1>
+            <p class="descripcion">Ingresa tres números para calcular su suma.</p>
+
+            <form data-ejercicio="suma">
+                <label for="valor1">Primer número</label>
+                <input id="valor1" type="number" step="any" required>
+
+                <label for="valor2">Segundo número</label>
+                <input id="valor2" type="number" step="any" required>
+
+                <label for="valor3">Tercer número</label>
+                <input id="valor3" type="number" step="any" required>
+
+                <button type="submit">Calcular suma →</button>
+            </form>
+
+            <div id="resultado" class="resultado" role="status"
+                 aria-live="polite" hidden></div>
+        </section>
+    </main>
+
+    <footer>Laboratorio 8 · JavaScript básico</footer>
+</body>
+</html>

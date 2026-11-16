@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promedio de calificaciones</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/app.js" defer></script>
+</head>
+<body>
+    <nav class="navegacion">
+        <a href="../index.html">← Volver al inicio</a>
+        <span class="etiqueta-azul">EJERCICIO 03</span>
+    </nav>
+
+    <main class="pagina">
+        <section class="panel formulario">
+            <div class="icono">03</div>
+            <h1>Promedio de calificaciones</h1>
+            <p class="descripcion">Ingresa el nombre y las tres calificaciones.</p>
+
+            <form data-ejercicio="promedio">
+                <label for="estudiante">Nombre del estudiante</label>
+                <input id="estudiante" type="text" maxlength="80" required>
+
+                <label for="nota1">Primera calificación</label>
+                <input id="nota1" type="number" step="any" min="0" required>
+
+                <label for="nota2">Segunda calificación</label>
+                <input id="nota2" type="number" step="any" min="0" required>
+
+                <label for="nota3">Tercera calificación</label>
+                <input id="nota3" type="number" step="any" min="0" required>
+
+                <button type="submit">Calcular promedio →</button>
+            </form>
+
+            <div id="resultado" class="resultado" role="status"
+                 aria-live="polite" hidden></div>
+        </section>
+    </main>
+
+    <footer>Laboratorio 8 · JavaScript básico</footer>
+</body>
+</html>

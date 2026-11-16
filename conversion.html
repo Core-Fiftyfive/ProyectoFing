@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversión de metros</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/app.js" defer></script>
+</head>
+<body>
+    <nav class="navegacion">
+        <a href="../index.html">← Volver al inicio</a>
+        <span class="etiqueta-azul">EJERCICIO 04</span>
+    </nav>
+
+    <main class="pagina">
+        <section class="panel formulario">
+            <div class="icono">04</div>
+            <h1>Conversión de unidades</h1>
+            <p class="descripcion">Convierte metros a centímetros y kilómetros.</p>
+
+            <form data-ejercicio="conversion">
+                <label for="metros">Cantidad en metros</label>
+                <input id="metros" type="number" step="any" min="0" required>
+
+                <button type="submit">Convertir unidades →</button>
+            </form>
+
+            <div id="resultado" class="resultado" role="status"
+                 aria-live="polite" hidden></div>
+        </section>
+    </main>
+
+    <footer>Laboratorio 8 · JavaScript básico</footer>
+</body>
+</html>

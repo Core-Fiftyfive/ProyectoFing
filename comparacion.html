@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparación de dos valores</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/app.js" defer></script>
+</head>
+<body>
+    <nav class="navegacion">
+        <a href="../index.html">← Volver al inicio</a>
+        <span class="etiqueta-azul">EJERCICIO 05</span>
+    </nav>
+
+    <main class="pagina">
+        <section class="panel formulario">
+            <div class="icono">05</div>
+            <h1>Comparación de dos valores</h1>
+            <p class="descripcion">Encuentra el mayor, el menor y su diferencia.</p>
+
+            <form data-ejercicio="comparacion">
+                <label for="numero1">Primer número</label>
+                <input id="numero1" type="number" step="any" required>
+
+                <label for="numero2">Segundo número</label>
+                <input id="numero2" type="number" step="any" required>
+
+                <button type="submit">Comparar valores →</button>
+            </form>
+
+            <div id="resultado" class="resultado" role="status"
+                 aria-live="polite" hidden></div>
+        </section>
+    </main>
+
+    <footer>Laboratorio 8 · JavaScript básico</footer>
+</body>
+</html>
+
